@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+    * {
+        box-sizing: border-box;
+    }
+
+    .section-header {
+        margin-bottom: 32px;
+    }
+
+    .section-tag {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        font-family: 'Figtree', sans-serif;
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 20px;
+        color: #5365d8;
+
+        margin-bottom: 8px;
+    }
+
+    .section-heading {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        font-family: 'Figtree', sans-serif;
+        font-size: 36px;
+        font-weight: 700;
+        line-height: 20px;
+        color: #071d49;
+    }
+
+    body {
+        margin: 0;
+        background: #faf9f5;
+        font-family: 'Figtree', sans-serif;
+        color: #071d49;
+    }
+
+    .project-card {
+        width: 100%;
+        max-width: 1100px;
+        margin: 0 auto;
+
+        display: grid;
+        grid-template-columns: 48% 52%;
+
+        overflow: hidden;
+
+        background: white;
+        border: 1px solid #dfe3ea;
+        border-radius: 32px;
+
+        box-shadow:
+            0 8px 25px rgba(7, 29, 73, 0.10);
+    }
+
+    .project-media {
+        position: relative;
+        min-height: 560px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        padding: 36px;
+
+        background:
+            radial-gradient(
+                circle at 50% 50%,
+                #ffffff 0%,
+                #f3f8ff 45%,
+                #e6faf1 100%
+            );
+}
+
+    .project-media img,
+    .project-media video {
+        width: 100%;
+        height: 100%;
+
+        object-fit: cover;
+
+        border-radius: 20px;
+
+        box-shadow:
+            0 12px 30px rgba(7, 29, 73, 0.12);
+    }
+
+    .project-tech {
+        position: absolute;
+        top: 24px;
+        left: 24px;
+
+        padding: 7px 12px;
+
+        display: flex;
+        align-items: center;
+        gap: 7px;
+
+        background: rgba(255,255,255,0.92);
+        border: 1px solid rgba(220,225,235,0.9);
+        border-radius: 999px;
+
+        font-size: 13px;
+        font-weight: 600;
+
+        color: #071d49;
+
+        backdrop-filter: blur(8px);
+    }
+
+    .project-tech-dot {
+        width: 7px;
+        height: 7px;
+
+        border-radius: 50%;
+
+        background: #5365d8;
+    }
+
+    .project-content {
+        padding: 54px 48px 48px;
+    }
+
+    .project-content h2 {
+        margin: 0 0 16px;
+
+        max-width: 440px;
+
+        font-size: 26px;
+        line-height: 1.18;
+        letter-spacing: -0.5px;
+
+        font-weight: 700;
+
+        color: #071d49;
+    }
+
+    .project-description {
+        margin: 0 0 26px;
+
+        max-width: 500px;
+
+        font-size: 16px;
+        line-height: 1.65;
+
+        color: #304c79;
+    }
+
+    .project-details {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+
+        margin-bottom: 24px;
+    }
+
+    .detail-box {
+        padding: 17px 16px;
+
+        min-height: 90px;
+
+        border-radius: 22px;
+
+        background: #f3f1e9;
+    }
+
+    .detail-box strong {
+        display: block;
+
+        margin-bottom: 5px;
+
+        font-size: 14px;
+        font-weight: 700;
+
+        color: #071d49;
+    }
+
+    .detail-box span {
+        display: block;
+
+        font-size: 14px;
+        line-height: 1.45;
+
+        color: #304c79;
+    }
+
+    .project-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 7px;
+
+        margin-bottom: 25px;
+    }
+
+    .tag {
+        padding: 6px 11px;
+
+        border: 1px solid #d9dfe9;
+        border-radius: 999px;
+
+        background: #f3f1e9;
+
+        font-size: 12px;
+        font-weight: 500;
+
+        color: #304c79;
+    }
+
+    .project-footer {
+        margin: 0;
+
+        font-size: 14px;
+        line-height: 1.55;
+
+        color: #304c79;
+    }
+
+
+
+    @media (max-width: 800px) {
+
+        .section-header {
+            margin-bottom: 18px;
+        }
+
+        .section-tag {
+            font-size: 12px;
+            line-height: 16px;
+        }
+
+        .section-heading {
+            font-size: 28px;
+            line-height: 1.2;
+        }
+
+        .project-card {
+            grid-template-columns: 1fr;
+            border-radius: 20px;
+        }
+
+        .project-media {
+            min-height: 0;
+            height: auto;
+            padding: 18px;
+        }
+
+        .project-media img {
+            width: 100%;
+            height: auto;
+            aspect-ratio: 16 / 10;
+            object-fit: cover;
+        }
+
+        .project-tech {
+            top: 14px;
+            left: 14px;
+            font-size: 11px;
+            padding: 6px 10px;
+        }
+
+        .project-content {
+            padding: 24px 20px 22px;
+        }
+
+        .project-content h2 {
+            font-size: 22px;
+            line-height: 1.2;
+            margin-bottom: 12px;
+        }
+
+        .project-description {
+            font-size: 14px;
+            line-height: 1.5;
+            margin-bottom: 18px;
+        }
+
+        .project-details {
+            display: none;
+            /* grid-template-columns: 1fr 1fr;
+            gap: 8px;
+            margin-bottom: 18px; */
+        }
+
+        .detail-box {
+            padding: 12px;
+            min-height: 0;
+            border-radius: 14px;
+        }
+
+        .detail-box strong {
+            font-size: 12px;
+            margin-bottom: 4px;
+        }
+
+        .detail-box span {
+            font-size: 12px;
+            line-height: 1.35;
+        }
+
+        .project-tags {
+            gap: 5px;
+            margin-bottom: 18px;
+        }
+
+        .tag {
+            padding: 5px 8px;
+            font-size: 11px;
+        }
+
+        .project-footer {
+            font-size: 12px;
+            line-height: 1.45;
+        }
+    }
+
+</style>
+</head>
+
+
+<body>
+<div class="section-header" id="projects">
+    <div class="section-tag">
+        <span>FEATURED PROJECT</span>
+    </div>
+    <div class="section-heading">
+        <span>Procedural Planets</span>
+    </div>
+</div>
+<div class="project-card">
+
+    <!-- left hand side -->
+    <div class="project-media">
+
+        <div class="project-tech">
+            <span class="project-tech-dot"></span>
+            Godot · GDScript
+        </div>
+
+        <img
+            src="https://reecebaker13.github.io/planet_model/high_quality_screenshot.png"
+            alt="Procedural planet generated in Godot"
+        >
+
+    </div>
+
+
+    <!-- right hand side -->
+    <div class="project-content">
+
+        <h2>
+            Whole planets from a couple of noise functions
+        </h2>
+
+        <p class="project-description">
+            Planets are generated from start to finish: terrain from layered
+            noise, surface normals computed for lighting, then biomes
+            assigned by sampling temperature and moisture fields,
+            meaning deserts, tundra and forest areas come from mathematical equations and aren't
+            hard coded.
+        </p>
+
+
+        <div class="project-details">
+
+            <div class="detail-box">
+                <strong>Terrain</strong>
+                <span>
+                    Constructed from multiple varying noise functions and masks
+                </span>
+            </div>
+
+            <div class="detail-box">
+                <strong>Lighting</strong>
+                <span>
+                    Done from surface normal calculations
+                </span>
+            </div>
+
+            <div class="detail-box">
+                <strong>Biomes</strong>
+                <span>
+                    Resulting from temperature and moisture combinations
+                </span>
+            </div>
+
+            <div class="detail-box">
+                <strong>Procedural Generation</strong>
+                <span>
+                    Seed based worlds creating vastly different results
+                </span>
+            </div>
+
+        </div>
+
+
+        <div class="project-tags">
+            <span class="tag">Procedural generation</span>
+            <span class="tag">Shaders & normals</span>
+            <span class="tag">Game engine</span>
+            <span class="tag">Perlin noise functions</span>
+        </div>
+
+
+        <p class="project-footer">
+            Visit
+            <a href="https://github.com/reeceBaker13/procedural_planet">github</a>
+            for the full project.
+        </p>
+
+    </div>
+
+</div>
+
+</body>
+</html>
