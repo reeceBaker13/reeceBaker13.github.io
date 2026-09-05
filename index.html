@@ -347,6 +347,154 @@
         flex: 0 0 19px;
         color: #5365d8;
     }
+
+       .section-heading {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+
+        font-family: 'Figtree', sans-serif;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 20px;
+        color: #071d49;
+        margin: 10px;
+    }
+
+    .heading-icon {
+        width: 19px;
+        height: 19px;
+        flex: 0 0 19px;
+        color: #5365d8;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0px 20px 20px 20px;
+      background: #faf9f4;
+      font-family: Arial, sans-serif;
+      color: #071b3a;
+    }
+
+    .projects {
+      display: grid;
+
+      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+
+      gap: 20px;
+
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .project-card {
+      background: #ffffff;
+      border: 1px solid #d9dce5;
+      border-radius: 28px;
+      padding: 24px;
+
+      box-shadow:
+        0 4px 8px rgba(20, 30, 60, 0.04),
+        0 12px 24px rgba(20, 30, 60, 0.08);
+
+      min-width: 0;
+    }
+
+    .card-header {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .card-title {
+      margin: 0;
+      font-size: 18px;
+      line-height: 1.2;
+      font-weight: 700;
+    }
+
+    .card-language {
+      margin: 5px 0 0;
+      font-size: 12px;
+      color: #333fbe;
+      letter-spacing: 0.2px;
+    }
+
+    /* Orange status badge */
+    .card-status {
+      flex-shrink: 0;
+
+      padding: 6px 11px;
+
+      border-radius: 999px;
+
+      background: #ffc45f;
+      color: #171717;
+
+      font-size: 11px;
+      white-space: nowrap;
+    }
+
+    .card-description {
+      margin: 16px 0 0;
+
+      font-size: 16px;
+      line-height: 1.5;
+    }
+
+    .card-details {
+      margin: 8px 0 0;
+
+      color: #344777;
+      font-size: 14px;
+      line-height: 1.65;
+    }
+
+    /* Tags */
+    .card-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+
+      margin-top: 18px;
+    }
+
+    .tag {
+      padding: 5px 12px;
+
+      border: 1px solid #d8dce4;
+      border-radius: 999px;
+
+      background: #f5f3ed;
+
+      color: #263d6e;
+      font-size: 12px;
+      white-space: nowrap;
+    }
+
+    @media (max-width: 440px) {
+      body {
+        padding: 12px;
+      }
+
+      .projects {
+        grid-template-columns: 1fr;
+      }
+
+      .project-card {
+        padding: 20px;
+        border-radius: 24px;
+      }
+
+      .card-header {
+        flex-direction: column;
+      }
+    }
 </style>
 </head>
 
@@ -455,5 +603,139 @@
      <span>More things I've built</span>
  </div>
 
+   
+  <main class="projects">
+
+    <article class="project-card">
+
+      <div class="card-header">
+
+        <div>
+          <h2 class="card-title">
+            3D Environment
+          </h2>
+
+          <p class="card-language">
+            JAVA · SWING
+          </p>
+        </div>
+
+      </div>
+
+      <p class="card-description">
+        Perlin-noise terrain rendered from scratch, with gravity and player movement.
+      </p>
+
+      <p class="card-details">
+        Software render built without an engine: noise-driven heightmaps,
+        projection maths and a simple physics loop for walking and falling.
+      </p>
+
+      <div class="card-tags">
+        <span class="tag">Rendering</span>
+        <span class="tag">Perlin noise</span>
+        <span class="tag">Physics</span>
+      </div>
+
+    </article>
+
+    <article class="project-card">
+
+      <div class="card-header">
+
+        <div>
+          <h2 class="card-title">
+            Particle Physics Simulation
+          </h2>
+
+          <p class="card-language">
+            C++
+          </p>
+        </div>
+
+      </div>
+
+      <p class="card-description">
+        Planetary body based collisions with mass-dependent gravitational fields.
+      </p>
+
+      <p class="card-details">
+        Simulates gravitational attraction between bodies, varying elasticity in collisions and object path prediction.
+      </p>
+
+      <div class="card-tags">
+        <span class="tag">Simulation</span>
+        <span class="tag">Physics</span>
+        <span class="tag">Mathematical Algorithms</span>
+      </div>
+
+    </article>
+
+    <article class="project-card">
+
+      <div class="card-header">
+
+        <div>
+          <h2 class="card-title">
+            Gym Management Software
+          </h2>
+
+          <p class="card-language">
+            PYTHON · TKINTER · JSON
+          </p>
+        </div>
+
+      </div>
+
+      <p class="card-description">
+        A realistic tool for managing gym clientele, staff, scheduling and bookings.
+      </p>
+
+      <p class="card-details">
+        Built for an existing gym. Manages members and staff records and accounts, 
+        has calendar functionality, session scheduling and booking management that persists as JSON.
+      </p>
+
+      <div class="card-tags">
+        <span class="tag">Desktop Tkinter UI</span>
+        <span class="tag">JSON Storage</span>
+      </div>
+
+    </article>
+
+    <article class="project-card">
+
+      <div class="card-header">
+
+        <div>
+          <h2 class="card-title">
+            Transactional Website
+          </h2>
+
+          <p class="card-language">
+            PHP · JS · SQL · AJAX · HTML · CSS
+          </p>
+        </div>
+
+      </div>
+
+      <p class="card-description">
+        Full-stack shop flow with sessions and live database interactions. 
+      </p>
+
+      <p class="card-details">
+        Server-side PHP database layer, AJAX based interactions and JS session-dependent state storage and animations.
+      </p>
+
+      <div class="card-tags">
+        <span class="tag">Full-stack</span>
+        <span class="tag">SQL</span>
+        <span class="tag">Sessions</span>
+      </div>
+
+    </article>
+
+  </main>
+   
 </body>
 </html>
