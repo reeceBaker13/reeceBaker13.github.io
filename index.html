@@ -858,6 +858,193 @@
             }
         }
 
+        /* =========================
+        CONTACT / CTA SECTION
+        ========================= */
+        
+        .contact-section {
+        width: 100%;
+        max-width: 1112px;
+        margin: 0 auto;
+        padding: 64px 24px;
+        }
+        
+        .contact-card {
+        width: 100%;
+        min-height: 385px;
+        margin: 0 auto;
+        position: relative;
+        padding: 48px;
+        background: #ffffff;
+        border: 1px solid #dce2e8;
+        border-radius: 34px;
+        box-shadow: 0 6px 20px rgba(7, 29, 73, 0.14);
+        overflow: hidden;
+        }
+        
+        .contact-content {
+        max-width: 650px;
+        }
+        
+        .contact-content h2 {
+        margin: 0 0 16px;
+        max-width: 520px;
+        font-size: 36px;
+        line-height: 1.12;
+        letter-spacing: -1.1px;
+        font-weight: 700;
+        color: #071d49;
+        }
+        
+        .contact-description {
+        margin: 0 0 34px;
+        font-size: 17px;
+        line-height: 1.65;
+        color: #304c79;
+        }
+        
+        .contact-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        max-width: 600px;
+        }
+        
+        .contact-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 9px;
+        min-height: 46px;
+        max-width: 100%;
+        padding: 0 18px;
+        border: 1px solid #d7deea;
+        border-radius: 999px;
+        background: #ffffff;
+        color: #071d49;
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 1.3;
+        text-decoration: none;
+        transition:
+        background 0.15s ease,
+        transform 0.15s ease,
+        box-shadow 0.15s ease;
+        }
+        
+        .contact-link:hover {
+        background: #f5f7fb;
+        transform: translateY(-1px);
+        box-shadow: 0 4px 10px rgba(7, 29, 73, 0.08);
+        }
+        
+        .contact-link.primary {
+        background: #5365d8;
+        border-color: #5365d8;
+        color: #ffffff;
+        }
+        
+        .contact-link.primary:hover {
+        background: #4658cc;
+        }
+        
+        .contact-link svg {
+        width: 17px;
+        height: 17px;
+        flex: 0 0 17px;
+        }
+        
+        .contact-graphic {
+        position: absolute;
+        right: 55px;
+        top: 50%;
+        width: 250px;
+        height: 250px;
+        transform: translateY(-50%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        pointer-events: none;
+        }
+        
+        .contact-graphic svg {
+        width: 100%;
+        height: 100%;
+        }
+        
+        /* Tablet */
+        @media (max-width: 850px) {
+            .contact-section {
+            padding: 52px 20px;
+            }
+            
+            ```
+            .contact-card {
+                min-height: auto;
+                padding: 40px 28px;
+            }
+            
+            .contact-content {
+                max-width: none;
+            }
+            
+            .contact-content h2 {
+                font-size: 31px;
+            }
+            
+            .contact-graphic {
+                display: none;
+            }
+        
+        }
+        
+        /* Phone */
+        @media (max-width: 600px) {
+            .contact-section {
+            padding: 42px 14px;
+            }
+                
+            .contact-card {
+                padding: 28px 18px;
+                border-radius: 22px;
+            }
+            
+            .contact-content h2 {
+                margin-bottom: 12px;
+                font-size: 26px;
+                line-height: 1.18;
+                letter-spacing: -0.7px;
+            }
+            
+            .contact-description {
+                margin-bottom: 22px;
+                font-size: 14px;
+                line-height: 1.55;
+            }
+            
+            .contact-links {
+                flex-direction: column;
+                align-items: stretch;
+                gap: 8px;
+            }
+            
+            .contact-link {
+                width: 100%;
+                justify-content: center;
+                min-height: 44px;
+                padding: 9px 14px;
+                font-size: 12px;
+                text-align: center;
+            }
+            
+            .contact-link svg {
+                width: 16px;
+                height: 16px;
+                flex-basis: 16px;
+            }
+        
+        }
+
+
     </style>
 </head>
 
@@ -1417,6 +1604,112 @@
         </div>
 
     </section>
+
+    <section class="contact-section">
+
+        <div class="contact-card">
+        
+            <div class="contact-content">
+        
+                <h2>
+                    Happy to talk about programming roles.
+                </h2>
+        
+                <p class="contact-description">
+                    Based in St Andrews, set up for remote work, available for an
+                    internship.<br>
+                    My preferred mode of contact is email.
+                </p>
+        
+                <div class="contact-links">
+        
+                    <a
+                        class="contact-link primary"
+                        href="mailto:reecebaker52@gmail.com"
+                    >
+                        <svg
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="1.8"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            aria-hidden="true"
+                        >
+                            <rect x="3" y="5" width="18" height="14" rx="2"/>
+                            <path d="m3 7 9 6 9-6"/>
+                        </svg>
+        
+                        reecebaker52@gmail.com
+                    </a>
+        
+                    <a
+                        class="contact-link"
+                        href="https://github.com/reeceBaker13"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        <svg
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="1.7"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            aria-hidden="true"
+                        >
+                            <path d="M9 19c-4 1-4-2-6-2"/>
+                            <path d="M15 21v-3.5c0-1 .1-1.5-.5-2 2.5-.3 5-1.2 5-5.5 0-1.2-.4-2.2-1.1-3 .1-.3.5-1.5-.1-3 0 0-1-.3-3.3 1.1a11.4 11.4 0 0 0-6 0C6.7 1.7 5.7 2 5.7 2c-.6 1.5-.2 2.7-.1 3C4.9 7.8 4.5 8.8 4.5 10c0 4.3 2.5 5.2 5 5.5-.6.5-.8 1.1-.8 2V21"/>
+                        </svg>
+        
+                        github.com/reeceBaker13
+                    </a>
+        
+                    <a
+                        class="contact-link"
+                        href="https://www.linkedin.com/in/reece-baker-cs/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        <svg
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="1.7"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            aria-hidden="true"
+                        >
+                            <rect x="4" y="4" width="16" height="16" rx="2"/>
+                            <path d="M8 10v6"/>
+                            <path d="M8 8v.01"/>
+                            <path d="M12 16v-3.5a2.5 2.5 0 0 1 5 0V16"/>
+                            <path d="M12 10v6"/>
+                        </svg>
+        
+                        linkedin.com/in/reece-baker-cs
+                    </a>
+        
+                </div>
+        
+            </div>
+        
+            <div class="contact-graphic" aria-hidden="true">
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                >
+                    <path
+                        fill-rule="evenodd"
+                        d="M5.75 4.5c-1.519 0-2.75 1.231-2.75 2.75v5.5c0 1.519 1.231 2.75 2.75 2.75h8.5c1.519 0 2.75-1.231 2.75-2.75v-5.5c0-1.519-1.231-2.75-2.75-2.75h-8.5Zm-1.25 2.75c0-.69.56-1.25 1.25-1.25h8.5c.69 0 1.25.56 1.25 1.25v5.5c0 .69-.56 1.25-1.25 1.25h-8.5c-.69 0-1.25-.56-1.25-1.25v-5.5Zm2.067.32c-.375-.175-.821-.013-.997.363-.175.375-.013.821.363.997l3.538 1.651c.335.156.723.156 1.058 0l3.538-1.651c.376-.176.538-.622.363-.997-.175-.376-.622-.538-.997-.363l-3.433 1.602-3.433-1.602Z"
+                    />
+                </svg>
+            </div>
+        
+        </div>
+
+    </section>
+
 
 
 </body>
